@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Map Rip</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="app/app.js"></script>
+</head>
+<body>
+    <div id="content">
+        <h1>Map Rip</h1>
+            <div id="mapNumDiv">
+                <label>Map Number:</label>
+                <input id="mapNumInput" type="text" />
+                <input id="getMapBtn" type="button" onclick="iiifRip.onGetMapClick()" value="Get Map" />
+                <span id="mapNumErrorSpan"></span>
+            </div>
+            <div id="mapScaleDiv" hidden>
+                <label>Image Scale:</label>
+                <select id="mapScaleSelect" onchange="iiifRip.onMapScaleChange()"></select>
+                <span>Warning: large scale images can be slow to load.</span>
+                <br/>
+                <input type="button" onclick="iiifRip.onChangeMapClick()" value="Change Map" />
+            </div>
+        <canvas id="canvas"></canvas>
+    </div>
+</body>
+</html>
